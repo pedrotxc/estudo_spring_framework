@@ -8,9 +8,13 @@
    Usar anotações @RestController, @RequestMapping e @GetMapping, para mapear essa primeira classe.
 
 4- Requisições POST
+
    4.1- Instalar postman
+   
    4.2- Criar primeira chamada post para a endpoint /medicos
+   
    4.3- Mapear a controller e dar sysout nas informações enviadas pelo postman. Receber essas informações através de uma String a principio, para aprendizagem. Lembrar de usar a anotação @RequestBody para indicar que é o corpo da requisição
+   
    4.4- Criar record (presente nas versões do java 14 e java16) para receber as informações JSON (padrão DTO = Data transfer object), que antes recebemos como string.
 
 Spring Data JPA
