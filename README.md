@@ -1,10 +1,13 @@
 # spring-boot-estudo
-Criar projeto no spring initializr
-Importar projeto como maven
-Criar primeira classe Hello World
--usar anotações @RestController, @RequestMapping e @GetMapping, para mapear essa primeira classe.
 
-Requisições POST
+1- Criar projeto no spring initializr (dependencia inicias: lombok, devtools, spring web)
+
+2- Importar projeto como maven
+
+3- Criar primeira classe Hello World
+   Usar anotações @RestController, @RequestMapping e @GetMapping, para mapear essa primeira classe.
+
+4- Requisições POST
 -Instalar postman
 -criar primeira chamada post para a endpoint /medicos
 -mapear a controller
