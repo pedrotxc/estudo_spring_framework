@@ -17,11 +17,11 @@
    
    4.4- Criar record (presente nas versões do java 14 e java16) para receber as informações JSON (padrão DTO = Data transfer object), que antes recebemos como string.
 
-Spring Data JPA
--Adicionar as dependências necessárias.
--Configurar o application properties com as conexões de banco. (saber o formato application.yaml)
--Configurar a JPA, criando calss emedico para receber as anotações dos seus atributos
--Criar a interface repository e salvar os dados, sendo que esses dados serão recebidos através do construtor pelas entidades.
+5- Spring Data JPA
+   5.1- Adicionar as novas dependências para fazer conexão com banco e validação (validation, flyway migration, mysql driver, spring data jpa)
+   5.2- Configurar o application properties com as conexões de banco. (saber o formato application.yaml)
+   5.3- Configurar a JPA, criando calss emedico para receber as anotações dos seus atributos
+   5.4- Criar a interface repository e salvar os dados, sendo que esses dados serão recebidos através do construtor pelas entidades.
 -Criar migrations com flyway para armazenar a evolução do banco de dados.
     -Adicionar a dependencia no pom.xml
     -Criar pasta db/migration na resource
