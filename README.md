@@ -26,6 +26,7 @@
    5.3- Criar a entidade JPA médico e mapear comas anotações JPA. Lembrar de usar lombok.
    
    5.4- Criar a interface repository e fazer essa interface extender a repository da JPA. Criar um atributo repository na controller e fazer a injeção de dependência (usar anotação @Autowired para que a jpa instancie a repository).
+   
    5.5- Usar a interface repository para salvar os dados. Passar os dados que serão salvos via contrutor.
    
 -Criar migrations com flyway para armazenar a evolução do banco de dados.
