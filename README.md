@@ -29,10 +29,8 @@
    
    5.5- Usar a interface repository para salvar os dados. Passar os dados que serão salvos via contrutor.
    
--Criar migrations com flyway para armazenar a evolução do banco de dados.
-    -Adicionar a dependencia no pom.xml
-    -Criar pasta db/migration na resource
-    -Criar aquivo no padrão flyway "V1_nome.sql"
+   5.6- Criar migrations com flyway para armazenar a evolução do banco de dados, para usar o flyway é necessário ter a dependência no pom. As migrations deverão ser criadas dentro do diretório resource/db/migration e o padrão de nomenclatura é V1__"nome_migration".sql. A primeira tabela que é criada no projeto é a tabela de médicos.
+    
 -Usar bean validation para dizer quais são os campos obrigatórios.
     -Adicionar notações @notnull / @notblank (Somente para campos string) / @email / @pattern / @Valid
     -https://jakarta.ee/specifications/bean-validation/3.0/jakarta-bean-validation-spec-3.0.html#builtinconstraints 
