@@ -31,10 +31,10 @@
    
    5.6- Criar migrations com flyway para armazenar a evolução do banco de dados, para usar o flyway é necessário ter a dependência no pom. As migrations deverão ser criadas dentro do diretório resource/db/migration e o padrão de nomenclatura é V1__"nome_migration".sql. A primeira tabela que é criada no projeto é a tabela de médicos.
     
--Usar bean validation para dizer quais são os campos obrigatórios.
-    -Adicionar notações @notnull / @notblank (Somente para campos string) / @email / @pattern / @Valid
-    -https://jakarta.ee/specifications/bean-validation/3.0/jakarta-bean-validation-spec-3.0.html#builtinconstraints 
--Adicionar novo campo telefone e adicionar nova migration.
+   5.7- Usar a dependecia bean validation para dizer quais são os campos obrigatórios. As anotações usadas em primeiro momento no projeto são: @NotNull, @NotBlank (apenas String), @Email, @Pattern e @Valid. Segue link com outras anotações dessa dependência https://jakarta.ee/specifications/bean-validation/3.0/jakarta-bean-validation-spec-3.0.html#builtinconstraints
+   
+   5.8- Adicionar novo campo telefone, esse campo deve ser adicionado no banco através das migrations. Lembrar de fazer o mapeamento e adicionar as validations.
+   
 
 -Fazer metodo de listagem, usando o método findAll do repository. Lembrando que assim como para enviar os dados no post, foi necessário criar o record
 para receber os atributos, na listagem também será necessário a criação do record para receber o valor dos atributos.
