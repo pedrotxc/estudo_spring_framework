@@ -42,12 +42,9 @@
    6.2- Criar a chamda do método de listar os dados no postman.
    
    6.3- Alterar o método de listar na controller, para fazer a paginação. Necessário receber como parametro um Pageable e alterar o tipo de retorno do metódo para Page. Além disso retirar o .strem, pois o método pageable ja possui o map, e também retirar o toList. A paginação é feita através da url, no postman, passando o parametro "?size=1" para falar quantos registros terão na página e para selecionar a pagina o "page=1".
-
--Fazer paginação, usando a classe Page e Pageable, usar map para fazer a conversão para DadosListagemMédico (também tem a alternativa de ser feito essa
-alteração mexendo na configuração default do spring através da anotação @PageableDefault(size = 10, sort = {"nome"}))
-http://localhost:8080/medicos?sort=crm,desc&size=2&page=0
--Fazer a listagem em ordem alfabetica
-
+   
+   6.4- Fazer a listagem em ordem alfabetica, usando o parâmetro sort na url, ex: "?sort=nome", também é possível definir se será em ordem crescente ou decrescente essa ordenação, ex:"?sort=nome,desc".
+   
 pela configuração podemos alterar o nome dos parametros (ingles para portugues por exemplo)
 spring.data.web.pageable.page-parameter=pagina
 spring.data.web.pageable.size-parameter=tamanho
