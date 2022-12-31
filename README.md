@@ -51,4 +51,4 @@
 
    7.1- Criar uma requisição PUT no postman para atualizar os dados e começar a criar o método de atualização na controller.
    
-   7.2- 
+   7.2- Criar DTO para fazer a atualização dos dados. 
