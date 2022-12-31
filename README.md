@@ -35,6 +35,7 @@
    
    5.8- Adicionar novo campo telefone, esse campo deve ser adicionado no banco através das migrations. Lembrar de fazer o mapeamento e adicionar as validations.
    
+6- Requisições GET
 
 -Fazer metodo de listagem, usando o método findAll do repository. Lembrando que assim como para enviar os dados no post, foi necessário criar o record
 para receber os atributos, na listagem também será necessário a criação do record para receber o valor dos atributos.
