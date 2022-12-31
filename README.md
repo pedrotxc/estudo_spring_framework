@@ -38,7 +38,10 @@
 6- Requisições GET
 
    6.1- Criar um DTO para listagem dos dados usando o método findAll do repository. Para converter os dados de médico para o DTO, é necessário criar um stream().map e passar as informações através de um construtor.
+   
    6.2- Criar a chamda do método de listar os dados no postman.
+   
+   6.3- Alterar o método de listar na controller, para fazer a paginação. Necessário receber como parametro um Pageable e alterar o tipo de retorno do metódo para Page. Além disso retirar o .strem, pois o método pageable ja possui o map, e também retirar o toList. A paginação é feita através da url, no postman, passando o parametro "?size=1" para falar quantos registros terão na página e para selecionar a pagina o "page=1".
 
 -Fazer paginação, usando a classe Page e Pageable, usar map para fazer a conversão para DadosListagemMédico (também tem a alternativa de ser feito essa
 alteração mexendo na configuração default do spring através da anotação @PageableDefault(size = 10, sort = {"nome"}))
