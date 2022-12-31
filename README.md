@@ -45,6 +45,8 @@
    
    6.4- Fazer a listagem em ordem alfabetica, usando o parâmetro sort na url, ex: "?sort=nome", também é possível definir se será em ordem crescente ou decrescente essa ordenação, ex:"?sort=nome,desc".
    
+   6.5- Adicionar configuração padrão de paginação através da anotação @PageableDefault, passamos a configuração padrão dentro dos paranteses, ex: @PageableDefault(size = 1, sort = {"cidade"}). E no apliation.properties adicionar a configuração para retornar a query no log e para que essa query seja formatada. Lembrete: É possível alterar a nomenclatura padrão que está em inglês através de configurações no application.properties, size, page, sort.
+   
 pela configuração podemos alterar o nome dos parametros (ingles para portugues por exemplo)
 spring.data.web.pageable.page-parameter=pagina
 spring.data.web.pageable.size-parameter=tamanho
