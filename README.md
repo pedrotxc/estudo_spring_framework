@@ -37,8 +37,7 @@
    
 6- Requisições GET
 
--Fazer metodo de listagem, usando o método findAll do repository. Lembrando que assim como para enviar os dados no post, foi necessário criar o record
-para receber os atributos, na listagem também será necessário a criação do record para receber o valor dos atributos.
+   6.1- Criar um DTO para listagem dos dados usando o método findAll do repository. Para converter os dados de médico para o DTO, é necessário criar um stream().map e passar as informações através de um construtor.
 
 -Fazer paginação, usando a classe Page e Pageable, usar map para fazer a conversão para DadosListagemMédico (também tem a alternativa de ser feito essa
 alteração mexendo na configuração default do spring através da anotação @PageableDefault(size = 10, sort = {"nome"}))
