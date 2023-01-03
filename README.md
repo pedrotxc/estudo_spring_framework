@@ -58,3 +58,5 @@
    7.4- Criar requisição DELETE no postman para ser feito o delete dos dados. Para fazer o delete, também é preciso informar o id do registro que será deletado, entretanto, diferente da forma que foi feito no método de atualização, no delete passaremos o id pela url.
    
    7.5- No método de excluir, receber o id pelo parametro, lembrar da anotação @PathVariable
+   
+   7.6- Como a exclusão é logica, não iremos deleter o registro do banco, apenas alterar o status para desativo. Para isso primeiro precisamos adicionar o campo status, pois ainda não temos. Então primeiramente criar a migration no flyway
