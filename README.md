@@ -54,3 +54,5 @@
    7.2- Criar DTO para fazer a atualização dos dados. 
    
    7.3- Buscar o id e as informações que serão atualizadas e criar método que irá fazer essas atualizações.
+   
+   7.4- Criar requisição DELETE no postman para ser feito o delete dos dados. Para fazer o delete, também é preciso informar o id do registro que será deletado, entretanto, diferente da forma que foi feito no método de atualização, no delete passaremos o id pela url.
