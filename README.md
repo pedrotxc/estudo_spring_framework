@@ -62,3 +62,5 @@
    7.6- Como a exclusão é logica, não iremos deleter o registro do banco, apenas alterar o status para desativo. Para isso primeiro precisamos adicionar o campo status, pois ainda não temos. Então primeiramente criar a migration no flyway
    
    7.7- Após criar a migration, criar esse novo atributo na entidade e no construtor, para ele ser sempre true quando for instanciado. No método de excluir da controller, buscar o registro que vai ser excluido pela ID, como foi feito no método de update e após isso, criar um método de excluir, que irá alterar o valor desse registro para false.
+
+   7.8- Alterar o método de listar todos, para listar apenas pelos ativos. Obs.: O Spring consegue fazer isso apenas pela nomenclatura, no caso findAllByAtivoTrue.
