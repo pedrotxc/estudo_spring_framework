@@ -1,0 +1,143 @@
+{
+	"info": {
+		"_postman_id": "db664ebd-37a4-477e-a2bd-885d25598fe3",
+		"name": "API Parking Control",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24949854"
+	},
+	"item": [
+		{
+			"name": "POST Parking Spot",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"parkingSpotNumber\": \"202A\",\r\n    \"licensePlateCar\": \"JSA4365\",\r\n    \"brandCar\": \"Ford\",\r\n    \"modelCar\": \"Fiesta\",\r\n    \"colorCar\": \"Prata\",\r\n    \"responsibleName\": \"Pedro Henrique\",\r\n    \"apartment\": \"202\",\r\n    \"block\": \"A\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/parking-spot",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"parking-spot"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Parking Spot",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/parking-spot",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"parking-spot"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "0",
+							"disabled": true
+						},
+						{
+							"key": "size",
+							"value": "5",
+							"disabled": true
+						},
+						{
+							"key": "sort",
+							"value": "registrationDate.DESC",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET BY ID Parking Spot",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/parking-spot/9a724b58-cb7b-4a1a-be57-a711631e6188",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"parking-spot",
+						"9a724b58-cb7b-4a1a-be57-a711631e6188"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE Parking Spot",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/parking-spot/9a724b58-cb7b-4a1a-be57-a711631e6188",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"parking-spot",
+						"9a724b58-cb7b-4a1a-be57-a711631e6188"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUY Parking Spot",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"parkingSpotNumber\": \"202A\",\r\n    \"licensePlateCar\": \"JSA4365\",\r\n    \"brandCar\": \"Ford\",\r\n    \"modelCar\": \"Fiesta\",\r\n    \"colorCar\": \"Prata\",\r\n    \"responsibleName\": \"Pedro Henrique Teixeira\",\r\n    \"apartment\": \"202\",\r\n    \"block\": \"A\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/parking-spot/4251659e-9242-43fc-8aa5-76d04d784bd9",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"parking-spot",
+						"4251659e-9242-43fc-8aa5-76d04d784bd9"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
