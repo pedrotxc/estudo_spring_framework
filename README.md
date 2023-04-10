@@ -7,3 +7,5 @@ Spring MVC
 Spring Data JPA
 
 Spring Validation
+
+Spring Security
