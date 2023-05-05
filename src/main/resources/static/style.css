@@ -1,0 +1,8 @@
+body {
+    background-color: #f2f2f2;
+    background-image: url("https://www.transparenttextures.com/patterns/black-thread-light.png");
+}
+
+.card {
+    border-radius: 10px;
+}
