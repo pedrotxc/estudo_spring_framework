@@ -1,6 +1,7 @@
-package model;
+package com.pedroh.utilitarios.model;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -15,6 +16,7 @@ import java.math.BigDecimal;
 @NoArgsConstructor
 public class Salary {
 
+    @Id
     private Long id;
     private BigDecimal value;
     private String receiptDate;

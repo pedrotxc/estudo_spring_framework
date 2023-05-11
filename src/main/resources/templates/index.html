@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt" xmlns:th="http://thymeleaft.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
 <head>
     <!--Import Google Icon Font-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
@@ -13,10 +13,9 @@
     <meta charset="UTF-8">
     <title>Utilitários</title>
 </head>
-
 <body>
     <nav>
-        <div class="nav-wrapper blue darken-1">
+        <div class="nav-wrapper teal darken-3">
             <div class="container">
                 <div class="row">
                     <a href="/" class="brand-logo">Utilitários</a>
@@ -25,26 +24,26 @@
                         <li><a href="#"><i class="material-icons left">exit_to_app</i>Sair</a></li>
                     </ul>
                 </div>
-            </class>
+            </div>
         </div>
     </nav>
     <div class="container">
         <div class="row">
             <div class="col s12 m6">
                 <!-- Card para controle financeiro -->
-                <div class="card blue darken-1">
+                <div class="card teal">
                     <div class="card-content white-text">
                         <span class="card-title"><i class="material-icons">attach_money</i>Controle Financeiro</span>
                         <p>Acompanhe suas finanças e investimentos.</p>
                     </div>
                     <div class="card-action">
-                        <a href="#" class="white-text">Entrar</a>
+                        <a href="/financeiro/detalhesfinanceiro" class="white-text">Entrar</a>
                     </div>
                 </div>
             </div>
             <div class="col s12 m6">
                 <!-- Card para saúde -->
-                <div class="card green darken-1">
+                <div class="card teal">
                     <div class="card-content white-text">
                         <span class="card-title"><i class="material-icons">local_hospital</i>Saúde</span>
                         <p>Gerencie sua saúde e bem-estar.</p>
