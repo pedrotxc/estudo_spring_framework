@@ -55,39 +55,31 @@
     
     <script>
         function adicionaRegistro(){
-            var tabela = document.getElementById("tabela-registros");
-            var novaLinha = tabela.insertRow(-1); // -1 insere a nova linha no final da tabela
-
-            // Cria os inputs para a nova linha
-            var dataInput = document.createElement("td");
-            dataInput.innerHTML = '<input type="text" name="data">'
-
-            var descricaoInput = document.createElement("td");
-            descricaoInput.innerHTML = '<input type="text" name="descricao" placeholder="Descrição">';
-
-            var tipoInput = document.createElement("td");
-            tipoInput.innerHTML = '<input type="text" name="tipo" placeholder="Tipo">';
-
-            var valorInput = document.createElement("td");
-            valorInput.innerHTML = '<input type="text" name="valor" placeholder="Valor">';
-
-            var salvarInput = document.createElement("td");
-            salvarInput.innerHTML = '<button class="waves-effect waves-light btn" onclick="salvarRegistro(this)">Salvar</button>';
-
-            // Adiciona os inputs e o botão à nova linha
-            novaLinha.appendChild(dataInput);
-            novaLinha.appendChild(descricaoInput);
-            novaLinha.appendChild(tipoInput);
-            novaLinha.appendChild(valorInput);
-            novaLinha.appendChild(salvarInput);
+       		var novaLinha = $("<tr></tr>");
+			// Cria os inputs para a nova linha
+			var dataInput = $("<td><input type='date' name='data' placeholder='Data'></td>");
+			var descricaoInput = $("<td><input type='text' name='descricao' placeholder='Descrição'></td>");
+			var tipoInput = $("<td><input type='text' name='tipo' placeholder='Tipo'></td>");
+			var valorInput = $("<td><input type='text' name='valor' placeholder='Valor'></td>");
+			var salvarInput = $("<td><button class='waves-effect waves-light btn' onclick='salvarRegistro(this)'>Salvar</button></td>");
+			
+			// Adiciona os inputs e o botão à nova linha
+			novaLinha.append(dataInput);
+			novaLinha.append(descricaoInput);
+			novaLinha.append(tipoInput);
+			novaLinha.append(valorInput);
+			novaLinha.append(salvarInput);
+			
+			// Adiciona a nova linha à tabela
+			$("#tabela-registros").append(novaLinha);
         }
 
         function salvarRegistro(botao) {
-            var linha = botao.parentNode.parentNode;
-            var data = linha.childNodes[0].textContent;
-            var descricao = linha.childNodes[1].childNodes[0].value;
-            var tipo = linha.childNodes[2].childNodes[0].value;
-            var valor = linha.childNodes[3].childNodes[0].value;
+        	var linha = $(botao).closest("tr");
+        	var data = linha.find("input[name='data']").val();
+        	var descricao = linha.find("input[name='descricao']").val();
+        	var tipo = linha.find("input[name='tipo']").val();
+        	var valor = linha.find("input[name='valor']").val();
 
             // Aqui você pode fazer uma requisição AJAX para enviar os dados para o backend e salvar no banco de dados
             $.ajax({
@@ -101,8 +93,8 @@
                 },
                 success: function(response) {
                     // A resposta do servidor foi bem sucedida, atualize a tabela de registros com o novo registro
-                    alert("Registro salvo com sucesso!");
-                    window.location.href("index");
+                    //alert("Registro salvo com sucesso!");
+                    window.location.href = "/";
                 },
                 error: function(xhr, status, error) {
                     // Houve um erro na solicitação HTTP POST, exiba uma mensagem de erro para o usuário

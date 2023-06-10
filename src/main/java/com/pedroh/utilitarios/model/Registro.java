@@ -2,6 +2,8 @@ package com.pedroh.utilitarios.model;
 
 import java.math.BigDecimal;
 
+import com.pedroh.utilitarios.enums.Tipo;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -12,7 +14,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-@Table(name = "Registro")
+@Table(name = "registro")
 @Entity
 @Getter
 @Setter
@@ -25,10 +27,10 @@ public class Registro {
     private Long id;
     private String data;
     private String descricao;
-    private String tipo;
+    private Tipo tipo;
     private BigDecimal valor;
     
-    public Registro(BigDecimal valor, String descricao, String data, String tipo) {
+    public Registro(BigDecimal valor, String descricao, String data, Tipo tipo) {
     	this.data = data;
     	this.descricao = descricao;
     	this.tipo = tipo;
