@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+	<!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="materialize/css/materialize.min.css"  media="screen,projection"/>
+	<!--Let browser know website is optimized for mobile-->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Treino App</title>
+</head>
+<body>
+	<div class="container">
+    	<h1>Cadastro de treino:</h1>
+    	<h3>
+			<a href="/treinos" class="waves-effect waves-light btn">
+				<i class="material-icons left">add_circle_outline</i>Lista de Treinos
+			</a>
+		</h3>
+    </div>
+    
+    <div class="container">
+	    <form method="post">
+	    	Exercicio: <input type="text" value="" name="exercicio"/>
+	    	Serie: <input type="text" value="" name="series"/>
+	    	Repetições: <input type="text" value="" name="repeticoes"/>
+	    	
+	    	<button type="submit" class="waves-effect waves-light btn">Salvar</button>
+	    </form>
+	</div>
+    
+    <!--JavaScript at end of body for optimized loading-->
+	<script type="text/javascript" src="materialize/js/materialize.min.js"></script>
+</body>
+</html>
