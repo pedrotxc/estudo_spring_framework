@@ -17,34 +17,33 @@
 <body>
 	<nav>
 		<div class="nav-wrapper container">
-			<a href="#" class="brand-logo">Logo</a>
-			<ul id="nav-mobile" class="right hide-on-med-and-down">
-				<li><a href="cadastrarInvestidor">Cadastrar</a></li>
-			</ul>
+			<a href="/" class="brand-logo">Logo</a>
 		</div>
 	</nav>
 
 	<div class="container">
-		<table>
-			<thead>
-				<tr>
-					<th>Nome Investidor</th>
-					<th>Idade Investidor</th>
-					<th>Perfil Investidor</th>
-					<th>Remover</th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr th:each="investidor : ${investidores}">
-					<td><span th:text="${investidor.nome}"></span></td>
-					<td><span th:text="${investidor.idade}"></span></td>
-					<td><span th:text="${investidor.perfil}"></span></td>
-					<td><a th:href="${#mvc.url('IC#deletarInvestidor').arg(0, investidor.id).build()}"><i class="material-icons left">delete</i></a></td>
-				</tr>
-			</tbody>
-		</table>
+		<form method="post" th:action="@{/cadastrarInvestidor}">
+			<div class="row">
+				<div class="input-field col s12">
+					<label for="nome">Nome Investidor </label> <input
+						type="text" id="nome" name="nome" />
+				</div>
+				<div class="input-field col s6">
+					<label for="idade">Idade Investidor </label> <input
+						type="text" id="idade" name="idade" />
+				</div>
+				<div class="input-field col s6">
+					<label for="perfil">Perfil Investidor </label> <input
+						type="text" id="perfil" name="perfil" />
+				</div>
+				
+				<button type="submit" class="waves-effect waves-light btn">
+					<i class="material-icons left">add_circle_outline</i>
+					Cadastrar Investidor
+				</button>
+			</div>
+		</form>
 	</div>
-	
 
 	<!--JavaScript at end of body for optimized loading-->
 	<script type="text/javascript" src="materialize/js/materialize.min.js"></script>

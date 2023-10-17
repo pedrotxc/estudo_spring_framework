@@ -1,10 +1,10 @@
-package com.pedroh.utilitarios;
+package com.estudo.financas;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class UtilitariosApplicationTests {
+class FinancasApplicationTests {
 
 	@Test
 	void contextLoads() {
