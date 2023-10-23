@@ -1,0 +1,100 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org" lang="pt">
+<head>
+<link rel="apple-touch-icon" sizes="180x180"
+	href="../image/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32"
+	href="../image/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16"
+	href="../image/favicon-16x16.png">
+<link rel="manifest" href="../image/site.webmanifest">
+<!--Import Google Icon Font-->
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+	rel="stylesheet">
+<!--Import materialize.css-->
+<link type="text/css" rel="stylesheet"
+	href="materialize/css/materialize.min.css" media="screen,projection" />
+<!--Let browser know website is optimized for mobile-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="stylesheet" href="./reset.css" />
+<link rel="stylesheet" href="./style.css" />
+<meta charset="UTF-8" />
+<title>Lista de Compras</title>
+</head>
+</head>
+<body>
+	<header>
+		<nav>
+			<div class="nav-wrapper">
+				<a href="/" class="brand-logo center">Lista de Compras</a>
+			</div>
+		</nav>
+	</header>
+	
+	<main class="container">
+		<div class="col s12">
+				<a class="waves-effect waves-light btn" href="/">Inicio</a>
+			</div>
+		<table>
+			<thead>
+				<tr>
+					<th>Nome Produto </th>
+					<th>Quantidade</th>
+					<th>Preço </th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr th:each="produto : ${lsCompras}">
+					<td th:text="${produto.nome}"/>
+					<td th:text="${produto.quantidade}"/>
+					<td th:text="${produto.preco}"/>
+					<td><a th:href="@{/alterarCompra(id=${produto.id})}"><i class="material-icons">update</i></a></td>
+					<td><a th:href="@{/removerCompra(id=${produto.id})}"><i class="material-icons">delete</i></a></td>
+				</tr>
+			</tbody>
+		</table>
+	</main>
+	
+	<footer>
+		<div class="container">
+			<div class="row">
+				<div class="col s12">
+					<p>Rodapé da Página</p>
+				</div>
+			</div>
+		</div>
+	</footer>
+	 <!-- Importe o jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Importe o materialize.js -->
+    <script type="text/javascript" src="materialize/js/materialize.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            // Quando o link "update" é clicado, exiba o modal de edição
+            $('a[data-target="#editarModal"]').click(function() {
+                $('#editarModal').modal('open');
+            });
+        });
+    </script>
+    <!-- Modal de edição -->
+    <div id="editarModal" class="modal">
+        <div class="modal-content">
+            <h4>Editar Produto</h4>
+            <form th:action="@{/editarProduto}" method="post">
+                <input type="hidden" />
+                <label for="nome">Nome do Produto:</label>
+                <input type="text" id="nome"/>
+                <label for="quantidade">Quantidade:</label>
+                <input type="text" id="quantidade"/>
+                <label for="preco">Preço:</label>
+                <input type="text" id="preco" />
+                <button type="submit" class="waves-effect waves-light btn">Salvar</button>
+            </form>
+        </div>
+        <div class="modal-footer">
+            <a href="#!" class="modal-close waves-effect waves-green btn-flat">Fechar</a>
+        </div>
+    </div>
+</body>
+</html>
+
