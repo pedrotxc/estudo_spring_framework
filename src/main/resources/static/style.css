@@ -1,25 +1,44 @@
-html{
-	font-family: 'Roboto', sans-serif;
-}
-
 body {
-    background-color: #f2f2f2;
-    background-image: url("https://www.transparenttextures.com/patterns/black-thread-light.png");
+    background-color: black;
+    color: yellow;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
-input {
-	text-align: center;
+header {
+    background-color: yellow;
+    text-align: center;
+    padding: 20px;
 }
 
-::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-  	color: grey;
-  	text-align: center;
+h1 {
+    color: black;
 }
 
-.card {
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+}
+
+.utility-section {
+    background-color: yellow;
+    color: black;
+    margin: 10px;
+    padding: 20px;
     border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    min-width: 300px;
 }
 
-.adiciona-registro{
-	margin-top: 14px;
+footer {
+    background-color: yellow;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
 }

@@ -1,46 +1,37 @@
 <!DOCTYPE html>
-<html lang="pt" xmlns:th="http://thymeleaft.org">
+<html lang="pt">
 <head>
 	<meta charset="UTF-8">
-	<!--Import Google Icon Font-->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
-    <!--Import materialize.css-->
-    <link type="text/css" rel="stylesheet" href="materialize/css/materialize.min.css"  media="screen,projection"/>
-	<!--Let browser know website is optimized for mobile-->
-	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Controle de Treino</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="/static/style.css">
+	<title>Minha Aplicação de Utilitários</title>
 </head>
 <body>
-	<div class="container">
-		<h1>Lista de Treino</h1>
-		<h3>
-			<a href="/cadastrarTreino" class="waves-effect waves-light btn">
-				<i class="material-icons left">add_circle_outline</i>Cadastrar Treino
-			</a>
-		</h3>
-	</div>
-	
-	<div class="container">
-		<table>
-			<thead>
-				<tr>
-					<th>Exercício</th>
-					<th>Série</th>
-					<th>Repetições</th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr th:each="treino: ${treino}">
-					<td><a th:href="${(#mvc.url('TC#detalhesTreino').arg(0, treino.id)).build()}"><span th:text="${treino.exercicio}"></span></a></td>
-					<td><span th:text="${treino.series}"></span></td>
-					<td><span th:text="${treino.repeticoes}"></span></td>
-				</tr>
-			</tbody>
-		</table>
-	</div>
-	
-	<!--JavaScript at end of body for optimized loading-->
-	<script type="text/javascript" src="materialize/js/materialize.min.js"></script>
+<header>
+	<h1>Minha Aplicação de Utilitários</h1>
+</header>
+<main>
+	<ul>
+		<li class="utility-section">
+			<h2>Mercado</h2>
+			<img src="compra.png" alt="Mercado">
+		</li>
+		<li class="utility-section">
+			<h2>Financeiro</h2>
+			<img src="financeiro.png" alt="Financeiro">
+		</li>
+		<li class="utility-section">
+			<h2>Academia</h2>
+			<img src="academia.png" alt="Academia">
+		</li>
+		<li class="utility-section">
+			<h2>Anotações</h2>
+			<img src="anotacoes.png" alt="Anotações">
+		</li>
+	</ul>
+</main>
+<footer>
+	<p>&copy; 2023 PH. Todos os direitos reservados.</p>
+</footer>
 </body>
 </html>
-
