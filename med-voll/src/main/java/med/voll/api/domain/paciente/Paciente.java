@@ -6,7 +6,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 @Table(name = "pacientes")
-@Entity(name = "paciente")
+@Entity(name = "Paciente")
 @Getter
 @NoArgsConstructor
 @AllArgsConstructor
@@ -27,4 +27,9 @@ public class Paciente {
     private String telefone;
     private Boolean ativo;
 
+    public Paciente(DadosCadastroPaciente dadosCadastroPaciente) {
+        this.nome = dadosCadastroPaciente.nome();;
+        this.email = dadosCadastroPaciente.email();
+        this.cpf = dadosCadastroPaciente.cpf();
+    }
 }
