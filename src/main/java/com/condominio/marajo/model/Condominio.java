@@ -1,5 +1,7 @@
 package com.condominio.marajo.model;
 
+import com.condominio.marajo.dto.condominio.CondominioAtualizacaoDTO;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -27,4 +29,10 @@ public class Condominio {
 	private String cnpj;
 	private String sindico;
 
+	
+	public void atualizarCondominio(CondominioAtualizacaoDTO dto) {
+		this.nome = dto.getNome();
+		this.cnpj = dto.getCnpj();
+		this.sindico = dto.getSindico();
+	}
 }

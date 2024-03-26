@@ -39,11 +39,9 @@ public class UsuarioController {
 	public ResponseEntity<Object> cadastrar(@RequestBody @Valid UsuarioCadastroDTO dto,
 			UriComponentsBuilder uriBuilder) {
 		Usuario usuario = Usuario.builder().nome(dto.getNome()).email(dto.getEmail()).senha(dto.getSenha()).build();
-
 		try {
 			Usuario usuarioCadastrado = usuarioService.cadastrarUsuario(usuario);
 			URI uri = uriBuilder.path("condominio/usuario/{id}").buildAndExpand(usuarioCadastrado.getId()).toUri();
-
 			return ResponseEntity.created(uri).body(dto);
 		} catch (RegraNegocioException e) {
 			return ResponseEntity.badRequest().body(e.getMessage());
@@ -60,9 +58,7 @@ public class UsuarioController {
 	@Transactional
 	public ResponseEntity<Object> atualizar(@RequestBody @Valid UsuarioAtualizacaoDTO dto) {
 		Usuario usuario = usuarioService.buscarUsuarioPeloId(dto.getId());
-
 		usuario.atualizaInformacoes(dto);
-
 		return ResponseEntity.ok(dto);
 
 	}
